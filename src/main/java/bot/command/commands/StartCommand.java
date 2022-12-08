@@ -4,7 +4,6 @@ import bot.command.CommandContext;
 import bot.command.ICommand;
 import bot.command.game.GameManager;
 import bot.command.game.LevelManager;
-import bot.command.game.TutorialManager;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.*;
 
@@ -25,7 +24,6 @@ public class StartCommand implements ICommand {
                     if (LevelManager.notWon(id)) {
                         GameManager.setLevelMessageID(id, message.getId());
                         LevelManager.addReactions(id, message);
-                        channel.sendMessage(TutorialManager.getTutorialMessage(id)).queue();
                         channel.sendMessage(GameManager.getNumAbilities(id)).queue();
                     }
                 }
