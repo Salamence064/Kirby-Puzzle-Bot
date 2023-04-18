@@ -38,11 +38,7 @@ public class Listener extends ListenerAdapter {
         String prefix = Config.get("prefix");
         String raw = event.getMessage().getContentRaw();
 
-        System.out.println(prefix); // for debugging
-
-        if (raw.equalsIgnoreCase(prefix + "shutdown") && user.getId().equals(Config.get("owner_id"))
-                || raw.equalsIgnoreCase(prefix + "shutdown") && user.getId().equals(Config.get("kevin_id"))) {
-
+        if (raw.equalsIgnoreCase(prefix + "shutdown") && user.getId().equals(Config.get("owner_id"))) {
             LOGGER.info("Shutting down.");
             event.getJDA().shutdown();
             BotCommons.shutdown(event.getJDA());

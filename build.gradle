@@ -23,7 +23,7 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'net.dv8tion', name: 'JDA', version: '4.4.0_352'
+    implementation("net.dv8tion:JDA:4.4.0_350")
     implementation group: 'me.duncte123', name: 'botCommons', version: '2.3.9'
     implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
     implementation group: 'io.github.cdimascio', name: 'java-dotenv', version: '5.1.1'
