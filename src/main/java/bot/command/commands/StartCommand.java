@@ -4,6 +4,7 @@ import bot.command.CommandContext;
 import bot.command.ICommand;
 import bot.command.game.GameManager;
 import bot.command.game.LevelManager;
+import bot.command.game.TutorialManager;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.*;
 
